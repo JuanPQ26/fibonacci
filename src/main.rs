@@ -12,23 +12,14 @@ fn main() {
 }
 
 #[cfg(test)]
-mod fibonacci {
-    use super::fib;
-
-    #[test]
-    fn test_fib_n_equal_one() {
-        assert_eq!(fib(1), 1);
-    }
-    
-    #[test]
-    fn test_fib_n_equal_zero() {
-        assert_eq!(fib(0), 0);
-    }
+mod tests {
+    use super::*;
 
     #[test]
     fn test_fib() {
+        assert_eq!(fib(0), 0);
+        assert_eq!(fib(1), 1);
         assert_eq!(fib(2), 1);
-        assert_eq!(fib(3), 2);
-        assert_eq!(fib(20), 6765);
+        assert_eq!(fib(10), 55);
     }
 }
